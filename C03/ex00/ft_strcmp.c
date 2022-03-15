@@ -1,49 +1,42 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
+/*   ft_strcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nzincenk <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/03/13 12:06:52 by nzincenk          #+#    #+#             */
-/*   Updated: 2022/03/15 11:48:56 by nzincenk         ###   ########.fr       */
+/*   Created: 2022/03/14 16:54:10 by nzincenk          #+#    #+#             */
+/*   Updated: 2022/03/14 19:27:06 by nzincenk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-
-unsigned int	ft_strlcpy(char *dest, char *src, unsigned int size)
+int ft_strcmp(char *s1, char *s2)
 {
-	unsigned int	i;
-	unsigned int	cmp;
-
-	i = 0;
-	cmp = 0;
-	if (size > 0)
+	unsigned char *p1 = (unsigned char *) s1;
+	unsigned char *p2 = (unsigned char *) s2;
+	unsigned char c1, c2;
+	while (c1 == c2)
 	{
-		while (src[cmp] != '\0')
-			cmp ++;
-		while (src[i] != '\0' && i < size - 1)
-		{
-			dest[i] = src[i];
-			i++;
-		}
-	dest[i] = '\0';
+		c1 = (unsigned char) *p1++;
+		c2 = (unsigned char) *p2++;
+		if (c1 == '\0')
+			return (c1 - c2);
 	}
-	return (cmp);
+	return (c1 - c2);
 }
-/*
+
 int main()
 {
-	char cou[100] = {0};
-	char str[100] = {"10IZkTUqK"};
-	str[0]='t';
-	str[1]='E';
-	str[2]='u';
-	str[3]='B';
-	str[4]=' ';
+	int main()
+{
+	char str[100];
+	str[0]='s';
+	str[1]='A';
+	str[2]='9';
+	str[3]='U';
+	str[4]='T';
 	str[5]=' ';
-	str[6]='c';
+	str[6]=' ';
 	str[7]='O';
 	str[8]='c';
 	str[9]='U';
@@ -52,10 +45,11 @@ int main()
 	str[12]='A';
 	str[13]='M';
 	str[14]='y';
-	int r =0;
-	r = ft_strlcpy(cou,str,8);
-	for (int i =0; i < 15; i++)
-		printf("%c",cou[i]);
-	printf("\n%d",r);
 
-}*/
+
+	for (int i =0; i < 15; i++)
+		printf("%c",str[i]);
+
+
+ft_strcmp();
+}

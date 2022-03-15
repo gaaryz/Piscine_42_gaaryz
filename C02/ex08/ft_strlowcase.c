@@ -6,7 +6,7 @@
 /*   By: nzincenk <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/12 23:14:12 by nzincenk          #+#    #+#             */
-/*   Updated: 2022/03/14 12:40:18 by nzincenk         ###   ########.fr       */
+/*   Updated: 2022/03/15 10:09:03 by nzincenk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ char	*ft_strlowcase(char *str)
 	i = 0;
 	while (str[i] != '\0')
 	{
-		if (str[i] >= 65 && str[i] <= 122)
+		if (str[i] >= 'A' && str[i] <= 'Z')
 			str[i] = str[i] + 32;
 		i++;
 	}
