@@ -6,9 +6,11 @@
 /*   By: nzincenk <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/15 20:31:37 by nzincenk          #+#    #+#             */
-/*   Updated: 2022/03/15 20:42:40 by nzincenk         ###   ########.fr       */
+/*   Updated: 2022/03/16 12:14:49 by nzincenk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+int ft_strlen()
 
 unsigned int ft_strlcat(char *dest, char *src, unsigned int size)
 {

@@ -1,31 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcmp_new.c                                    :+:      :+:    :+:   */
+/*   ft_strcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nzincenk <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/14 16:54:10 by nzincenk          #+#    #+#             */
-/*   Updated: 2022/03/15 17:42:50 by nzincenk         ###   ########.fr       */
+/*   Updated: 2022/03/16 10:25:59 by nzincenk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 #include <string.h>
 
-int ft_strcmp(char *s1, char *s2)
+int	ft_compt(char *s)
 {
-	int cmp1;
-	int cmp2;
-	int i;
+	int	cmp;
 
-	cmp1 = 0;
-	cmp2 = 0;
+	cmp = 0;
+	while (s[cmp] != '\0')
+	{
+		cmp++;
+	}
+	return (cmp);
+}
+
+int	ft_strcmp(char *s1, char *s2)
+{
+	int	cmp1;
+	int	cmp2;
+	int	i;
+
+	cmp1 = ft_compt(s1);
+	cmp2 = ft_compt(s2);
 	i = 0;
-	while (s1[cmp1] != '\0')
-		cmp1++;
-	while (s2[cmp2] != '\0')
-		cmp2++;
 	if (cmp1 != cmp2)
 	{
 		if (cmp1 > cmp2)
@@ -33,24 +41,22 @@ int ft_strcmp(char *s1, char *s2)
 		else
 			return (-1);
 	}
-	printf("verif fini\n");
 	while (s1[i] != '\0')
 	{
 		if (s1[i] > s2[i])
 			return (1);
 		else if (s1[i] < s2[i])
 			return (-1);
+		i++;
 	}
 	return (0);
-
-
 }
-
+/*
 int main(void)
 {
-	char str[100] = {"Helloooo"};
-	char cou[100] = {"Helloooo"};
-/*	str[0]='s';
+	char str[100] = {"Helloo"};
+	char cou[100] = {"Hello"};
+	str[0]='s';
 	str[1]='A';
 	str[2]='9';
 	str[3]='U';
@@ -65,7 +71,8 @@ int main(void)
 	str[12]='A';
 	str[13]='M';
 	str[14]='y';
-*/int a=0;
+
+	int a=0;
 	int	b=0;
 	//for (int i =0; i < 15; i++)
 	//	printf("%c",str[i]);
@@ -73,4 +80,4 @@ a = ft_strcmp(str,cou);
 printf("%d\n",a);
 b = strcmp(str,cou);
 printf("%d\n",b);
-}
+}*/

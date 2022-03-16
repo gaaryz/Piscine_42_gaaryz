@@ -6,13 +6,13 @@
 /*   By: nzincenk <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/15 16:55:14 by nzincenk          #+#    #+#             */
-/*   Updated: 2022/03/15 19:00:39 by nzincenk         ###   ########.fr       */
+/*   Updated: 2022/03/16 10:36:22 by nzincenk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 
-char *ft_strcat(char *dest, char *src)
+char	*ft_strcat(char *dest, char *src)
 {
 	int	i;
 	int	j;
@@ -28,6 +28,7 @@ char *ft_strcat(char *dest, char *src)
 		j++;
 	}
 	dest[i] = '\0';
+	return (dest);
 }
 /*
 int main(void)
