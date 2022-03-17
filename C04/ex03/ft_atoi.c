@@ -6,23 +6,26 @@
 /*   By: nzincenk <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/16 16:18:47 by nzincenk          #+#    #+#             */
-/*   Updated: 2022/03/16 19:15:32 by nzincenk         ###   ########.fr       */
+/*   Updated: 2022/03/17 20:19:39 by nzincenk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int ft_atoi(char *str)
 {
-	int	i;
-	int	minus;
-	i=0;
-	minus = 0;
+	int	nb;
+
+	nb = 0;
 	while (str[i] != '\0')
 	{
 		if (str[i] == '-')
-			minus++;
-	}
-	if (minus %2 == 0)
+			nb++;
+		else if (str[i] >= '0' && str[i] <= '9')
+			while (str[i] >= '0' && str[i] <= '9')
+			{
 
+				while ()
+			{
+	return (un int !);
 }
 
 int main( int argc, char *argv[] )
