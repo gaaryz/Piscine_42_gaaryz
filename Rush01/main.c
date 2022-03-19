@@ -1,42 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strstr.c                                        :+:      :+:    :+:   */
+/*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nzincenk <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/03/15 19:41:09 by nzincenk          #+#    #+#             */
-/*   Updated: 2022/03/19 11:11:31 by nzincenk         ###   ########.fr       */
+/*   Created: 2022/03/19 11:53:09 by nzincenk          #+#    #+#             */
+/*   Updated: 2022/03/19 12:00:28 by nzincenk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include <stdio.h>
 
-char	*ft_strstr(char *str, char *to_find)
+int	main(int	argc, char	**argv)
 {
-	int	i;
-	int	j;
-
-	i = 0;
-	if (*to_find == '\0')
-		return (str);
-	while (str[i] != '\0')
+	if (argc - 1 > 1)
+		return (0);
+	for (int i =0; i < 4; i =+ 4)
 	{
-		j = 0;
-		while (str[i + j] == to_find[j])
-		{
-			j++;
-			if (to_find[j] == '\0')
-				return (&str[i]);
-		}
-		i++;
+		printf("%c\n",argv[i]);
+		printf("%c\n",argv[i+1]);
+		printf("%c\n",argv[i+2]);
+		printf("%c\n",argv[i+3]);
+		printf("\n");
 	}
-	return (0);
+
 }
-/*
-int main(void)
-{
-	char str[100] = {"testy"};
-	char cou[100] = {"tescoutesty"};
-	printf("%s\n",ft_strstr(cou,str));
-	return(0);
-}*/
