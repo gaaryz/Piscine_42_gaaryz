@@ -1,29 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr.c                                        :+:      :+:    :+:   */
+/*   ft_recursive_power.c                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nzincenk <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/03/16 12:45:44 by nzincenk          #+#    #+#             */
-/*   Updated: 2022/03/22 16:25:04 by nzincenk         ###   ########.fr       */
+/*   Created: 2022/03/22 18:05:14 by nzincenk          #+#    #+#             */
+/*   Updated: 2022/03/22 19:10:52 by nzincenk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include <unistd.h>
+#include <stdio.h>
 
-void	ft_putchar(char c)
+int	ft_recursive_power(int nb, int power)
 {
-	write(1, &c, 1);
-}
+	int	ret;
 
-void	ft_putstr(char *str)
-{
-	while (*str)
-		ft_putchar(*str++);
+	ret = 1;
+	if (power >= 1)
+		ret = nb * ft_recursive_power(nb, power - 1);
+	return (ret);
 }
 /*
-int main(void)
+int main()
 {
-	char tab[100] = {"Coucou"};
-	ft_putstr(tab);
+	int	a;
+	a = ft_recursive_power(5, 3);
+	printf("%d",a);
+	return (0);
 }*/

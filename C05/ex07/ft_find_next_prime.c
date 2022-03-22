@@ -1,29 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr.c                                        :+:      :+:    :+:   */
+/*   ft_find_next_prime.c                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nzincenk <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/03/16 12:45:44 by nzincenk          #+#    #+#             */
-/*   Updated: 2022/03/22 16:25:04 by nzincenk         ###   ########.fr       */
+/*   Created: 2022/03/22 21:35:56 by nzincenk          #+#    #+#             */
+/*   Updated: 2022/03/22 21:44:01 by nzincenk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include <unistd.h>
+#include <stdio.h>
 
-void	ft_putchar(char c)
+int	ft_find_next_prime(int nb)
 {
-	write(1, &c, 1);
-}
+	int	i;
+	int	ret;
 
-void	ft_putstr(char *str)
-{
-	while (*str)
-		ft_putchar(*str++);
+	i = 0;
+	ret = 0;
+	while (i++ <= nb)
+		if (nb % i == 0)
+			ret++;
+	if (ret == 2)
+		return (nb);
+	return (ft_find_next_prime(nb + 1));
 }
 /*
-int main(void)
+int main()
 {
-	char tab[100] = {"Coucou"};
-	ft_putstr(tab);
+	int a;
+	a = ft_find_next_prime(90);
+	printf("%d",a);
 }*/

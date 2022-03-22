@@ -1,29 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr.c                                        :+:      :+:    :+:   */
+/*   ft_recursive_factorial.c                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nzincenk <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/03/16 12:45:44 by nzincenk          #+#    #+#             */
-/*   Updated: 2022/03/22 16:25:04 by nzincenk         ###   ########.fr       */
+/*   Created: 2022/03/22 11:22:29 by nzincenk          #+#    #+#             */
+/*   Updated: 2022/03/22 17:07:29 by nzincenk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include <unistd.h>
+#include <stdio.h>
 
-void	ft_putchar(char c)
+int	ft_recursive_factorial(int nb)
 {
-	write(1, &c, 1);
-}
+	int	ret;
 
-void	ft_putstr(char *str)
-{
-	while (*str)
-		ft_putchar(*str++);
+	ret = 1;
+	if (nb > 1)
+		ret = nb * ft_recursive_factorial(nb - 1);
+	return (ret);
 }
 /*
-int main(void)
+int main()
 {
-	char tab[100] = {"Coucou"};
-	ft_putstr(tab);
+	int a;
+	a = ft_recursive_factorial(6);
+
+	printf("%d",a);
+        return (0);
 }*/

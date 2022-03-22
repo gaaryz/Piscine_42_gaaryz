@@ -1,29 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr.c                                        :+:      :+:    :+:   */
+/*   ft_sqrt.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nzincenk <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/03/16 12:45:44 by nzincenk          #+#    #+#             */
-/*   Updated: 2022/03/22 16:25:04 by nzincenk         ###   ########.fr       */
+/*   Created: 2022/03/22 20:21:08 by nzincenk          #+#    #+#             */
+/*   Updated: 2022/03/22 21:11:49 by nzincenk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include <unistd.h>
+#include <stdio.h>
 
-void	ft_putchar(char c)
+int	ft_sqrt(int nb)
 {
-	write(1, &c, 1);
-}
+	unsigned int	nbbb;
+	unsigned int	sqrt;
 
-void	ft_putstr(char *str)
-{
-	while (*str)
-		ft_putchar(*str++);
+	sqrt = 0;
+	nbbb = 0;
+	if (nb < 0)
+		return (0);
+	if (nb < 2)
+		return (nb);
+	while (nbbb != (unsigned)nb && nbbb < (unsigned)nb)
+	{
+		sqrt++;
+		nbbb = sqrt * sqrt;
+	}
+	if (nbbb != (unsigned)nb)
+		return (0);
+	return ((int)sqrt);
 }
 /*
-int main(void)
+int main()
 {
-	char tab[100] = {"Coucou"};
-	ft_putstr(tab);
+	int a;
+	a = ft_sqrt(49);
+	printf("%d",a);
 }*/

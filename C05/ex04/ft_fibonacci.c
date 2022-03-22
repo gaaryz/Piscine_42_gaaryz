@@ -1,29 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr.c                                        :+:      :+:    :+:   */
+/*   ft_fibonacci.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nzincenk <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/03/16 12:45:44 by nzincenk          #+#    #+#             */
-/*   Updated: 2022/03/22 16:25:04 by nzincenk         ###   ########.fr       */
+/*   Created: 2022/03/22 19:11:32 by nzincenk          #+#    #+#             */
+/*   Updated: 2022/03/22 20:20:23 by nzincenk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include <unistd.h>
+#include <stdio.h>
 
-void	ft_putchar(char c)
+int	ft_fibonacci(int index)
 {
-	write(1, &c, 1);
-}
-
-void	ft_putstr(char *str)
-{
-	while (*str)
-		ft_putchar(*str++);
+	if (index == 0)
+		return (0);
+	if (index == 1 || index == 2)
+		return (1);
+	else
+		return (ft_fibonacci(index - 2) + ft_fibonacci(index - 1));
 }
 /*
-int main(void)
+int main()
 {
-	char tab[100] = {"Coucou"};
-	ft_putstr(tab);
+	int a;
+	a = ft_fibonacci(12);
+	printf("%d",a);
 }*/

@@ -6,7 +6,7 @@
 /*   By: nzincenk <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/16 16:18:47 by nzincenk          #+#    #+#             */
-/*   Updated: 2022/03/21 22:22:31 by nzincenk         ###   ########.fr       */
+/*   Updated: 2022/03/22 16:19:57 by nzincenk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include <stdio.h>
@@ -18,7 +18,7 @@ int	ft_atoi(char *str)
 
 	signe = 1;
 	val = 0;
-	while (*str < 33)
+	while ((*str > 10 && *str < 16) || *str == ' ')
 		str++;
 	while (*str == '+' || *str == '-')
 	{
@@ -50,6 +50,6 @@ int main( int argc, char **argv)
       printf("One argument expected.\n");
    }
 
-   a = ft_atoi(argv[1]);
+  a = ft_atoi(argv[1]);
    printf("%d\n",a);
 }*/
