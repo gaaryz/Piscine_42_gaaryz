@@ -6,61 +6,35 @@
 /*   By: nzincenk <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/16 16:18:47 by nzincenk          #+#    #+#             */
-/*   Updated: 2022/03/20 17:30:34 by nzincenk         ###   ########.fr       */
+/*   Updated: 2022/03/21 22:22:31 by nzincenk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include <stdio.h>
 
-int ft_atoi(char *str)
+int	ft_atoi(char *str)
 {
-	int	nb;
-	int	nb_minus;
-	int	i;
+	int	val;
+	int	signe;
 
-	nb_minus = 0;
-	nb = 0;
-	i = 0;
-	while (str[i] != '\0')
+	signe = 1;
+	val = 0;
+	while (*str < 33)
+		str++;
+	while (*str == '+' || *str == '-')
 	{
-		if (str[i] == '-' || str[i] == '+')
-			nb_minus++;
-		else if (str[i] >= '0' && str[i] <= '9')
-		{
-			while (str[i] >= '0' && str[i] <= '9')
-			{
-				nb = nb * 10 + (str[i] - '0');
-				i++;
-			}
-			break;
-		}
-		i++;
-	}
-	return (nb);
-/////////////////////////////////////////////////////////////////////////////////
-	while (*str)
-	{
-		while (*str == '-' || *str == '+')
-		{
-			str++;
-		}
+		if (*str == '-')
+			signe = signe * (-1);
 		str++;
 	}
-
 	while (*str >= '0' && *str <= '9')
-        {
-        	nb = nb * 10 + (*str - '0');
-        }
-        if (*str < '0' && *str > '9')
-        	return (nb);
-//////////////////////////////////////////////////////////////////////////////////////////
-
-
-
-
-
-
+	{
+		val = val * 10 + (*str - '0');
+		str++;
+	}
+	val = val * signe;
+	return (val);
 }
-
+/*
 int main( int argc, char **argv)
 {
 	int a;
@@ -78,4 +52,4 @@ int main( int argc, char **argv)
 
    a = ft_atoi(argv[1]);
    printf("%d\n",a);
-}
+}*/

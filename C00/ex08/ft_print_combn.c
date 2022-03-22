@@ -1,30 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_print_combn.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nzincenk <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/03/16 12:17:15 by nzincenk          #+#    #+#             */
-/*   Updated: 2022/03/21 22:18:35 by nzincenk         ###   ########.fr       */
+/*   Created: 2022/03/21 18:38:31 by nzincenk          #+#    #+#             */
+/*   Updated: 2022/03/21 18:38:57 by nzincenk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include <stdio.h>
 
-int	ft_strlen(char *str)
+void ft_print_combn(int n)
 {
-	int	i;
 
-	i = 0;
-	while (str[i] != '\0')
-		i++;
-	return (i);
 }
-/*
-int main(void)
-{
-	int a =0;
-	char tab[100] = {"Coucou"};
-	a = ft_strlen(tab);
-	printf("%d",a);
-}*/
