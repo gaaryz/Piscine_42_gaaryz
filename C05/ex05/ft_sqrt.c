@@ -6,7 +6,7 @@
 /*   By: nzincenk <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/22 20:21:08 by nzincenk          #+#    #+#             */
-/*   Updated: 2022/03/22 21:11:49 by nzincenk         ###   ########.fr       */
+/*   Updated: 2022/03/23 18:46:43 by nzincenk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include <stdio.h>
@@ -35,6 +35,6 @@ int	ft_sqrt(int nb)
 int main()
 {
 	int a;
-	a = ft_sqrt(49);
+	a = ft_sqrt(686391705);
 	printf("%d",a);
 }*/

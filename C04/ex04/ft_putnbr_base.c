@@ -6,7 +6,7 @@
 /*   By: nzincenk <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/21 12:25:32 by nzincenk          #+#    #+#             */
-/*   Updated: 2022/03/21 18:20:25 by nzincenk         ###   ########.fr       */
+/*   Updated: 2022/03/23 14:29:39 by nzincenk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,4 +50,11 @@ void ft_putnbr_base(int nbr, char *base)
 	}
 	/*pow base_l-1*/
 	ft_putchar(ret);
+}
+////////////////////////////////////////////////////////////
+void ft_putnbr_base(int nbr, char *base)
+{
+
+	ft_putnb(nb +; size_base);//pour lafichage du nb convertit et verif si caractere est dns la base.
+
 }
